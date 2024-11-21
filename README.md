@@ -93,4 +93,4 @@ Pueden usar la aplicación creada en la materia de Estrategia de Persistencia o 
    - Instrucciones para correr la aplicación.
 3. Enviar el link al repositorio al correo: [lucas.figarola@unahur.edu.ar](mailto:lucas.figarola@unahur.edu.ar).
 
-**Fecha límite**: Domingo 28/11 a las 18:00 hs.
+**Fecha límite**: Jueves 28/11 a las 18:00 hs.
