@@ -5,7 +5,8 @@ import Inicio from './pages/Inicio.jsx';
 import Catalogo from './pages/Catalogo.jsx';
 import DetalleProducto from './pages/DetalleProducto.jsx';
 import FabricantesYComponentes from './pages/FabricantesYComponentes.jsx';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 function App() {
