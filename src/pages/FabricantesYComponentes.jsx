@@ -15,7 +15,8 @@ function FabricantesYComponentes() {
   }, []);
 
   return (
-    <div>
+    <section className="min-vh-100">
+      <div>
       <h1>Fabricantes y Componentes</h1>
       <h2>Fabricantes</h2>
       <ul>
@@ -26,6 +27,7 @@ function FabricantesYComponentes() {
         {componentes.map(comp => <li key={comp.id}>{comp.nombre}</li>)}
       </ul>
     </div>
+    </section>
   );
 }
 
