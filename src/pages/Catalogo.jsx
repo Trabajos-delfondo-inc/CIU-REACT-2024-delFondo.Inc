@@ -41,12 +41,13 @@ function Catalogo() {
     );
     setTotal(totalCalculado);
   };
-
+  console.log(productos)
   return (
     <div>
       <h1>Catálogo de Productos</h1>
       <div className="row">
         {productos.map((producto) => (
+
           <div
             key={producto.id}
             style={{
@@ -62,6 +63,7 @@ function Catalogo() {
             <p>
               <strong>Precio:</strong> ${producto.precio}
             </p>
+            <img src={producto.pathImg} alt={producto.nombre} />
             <div>
               <label>
                 Cantidad:
