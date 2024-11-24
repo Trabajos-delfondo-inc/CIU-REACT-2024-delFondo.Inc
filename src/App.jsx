@@ -13,14 +13,14 @@ function App() {
   return (
     <Router>
       <Header />
-      <div className="container my-4">
+      {/* <div className="container my-4"> */}
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/catalogo" element={<Catalogo />} />
           <Route path="/productos/:id" element={<DetalleProducto />} />
            <Route path="/fabricantes-y-componentes" element={<FabricantesYComponentes />} />
         </Routes>
-      </div>
+      {/* </div> */}
       <Footer />
     </Router>
   )

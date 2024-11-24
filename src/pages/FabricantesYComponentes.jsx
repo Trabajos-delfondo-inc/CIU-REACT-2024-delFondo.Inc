@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function FabricantesYComponentes() {
   const [fabricantes, setFabricantes] = useState([]);
@@ -15,7 +16,7 @@ function FabricantesYComponentes() {
   }, []);
 
   return (
-    <section className="min-vh-100">
+    <section className="container my-4">
       <div>
       <h1>Fabricantes y Componentes</h1>
       <h2>Fabricantes</h2>

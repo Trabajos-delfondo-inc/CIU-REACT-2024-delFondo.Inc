@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/styles.css'
+import catalogoStyle from '../styles/catalogo.module.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function CatalogoProductos() {
   const [productosDisponibles, setProductosDisponibles] = useState([]);
@@ -49,7 +51,7 @@ function CatalogoProductos() {
 
 
   return (
-    <div>
+    <div className='container my-4'>
       {/* Botón que calcula el precio total */}
       <div className="mt-4">
         <button onClick={calcularPrecioTotal} className="btn btn-primary">
@@ -63,7 +65,7 @@ function CatalogoProductos() {
       </div>
       
       <h1>Catálogo de Productos</h1>
-      <div className='catalogo'>
+      <div className={catalogoStyle.catalogo}>
         {productosDisponibles.map((producto) => (
           <div key={producto.id} className="card">
             <img src={producto.pathImg} className={producto.nombre} alt={producto.nombre}/>
