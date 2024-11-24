@@ -16,11 +16,11 @@ function CatalogoProductos() {
       .catch((err) => console.error('Error al cargar los productos:', err));
   }, []);
   
-  /*DESCOMENTAR PARA LOGRAR EL EFECTO DE ACTUALIZACION DE PRECIO AL CAMBIAR LA CANTIDAD DE ITEMS
+  
   useEffect(()=>{
     calcularPrecioTotal()
     console.log(productosSeleccionados)
-  },[productosSeleccionados]);*/
+  },[productosSeleccionados]);
 
   const agregarProducto = (producto, cantidad) => {
     const productoConCantidad = { ...producto, cantidad: parseInt(cantidad)};

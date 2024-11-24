@@ -38,6 +38,18 @@
     background-color: var(--fondoOscuro);
 }
 
+.sectionC{
+    width: 100%;
+    margin: auto;
+    min-height: 100vh;
+    padding: 10px;
+    color: var(--letraColorOscuro);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--fondoClaro);
+}
+
 .titulo{
     padding: 20px;
     display: flex;
