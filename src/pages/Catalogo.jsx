@@ -14,8 +14,8 @@ function CatalogoProductos() {
       .catch((err) => console.error('Error al cargar los productos:', err));
   }, []);
 
-  const agregarProducto = (producto, cantidad = 1) => {
-    const productoConCantidad = { ...producto, cantidad: parseInt(cantidad) || 1 };
+  const agregarProducto = (producto, cantidad) => {
+    const productoConCantidad = { ...producto, cantidad: parseInt(cantidad)};
     setProductosSeleccionados((productosPrevios) => {
       const productoExistente = productosPrevios.find((item) => item.id === producto.id);
       if (productoExistente) {
@@ -34,6 +34,7 @@ function CatalogoProductos() {
         producto.id === idProducto ? { ...producto, cantidad: cantidadNumerica } : producto
       )
     );
+    console.log(productosSeleccionados)
   };
 
   const calcularPrecioTotal = () => {
@@ -43,7 +44,9 @@ function CatalogoProductos() {
     );
     setPrecioTotal(totalCalculado);
   };
-  console.log(productosDisponibles)
+
+
+
 
   return (
     <div>
@@ -62,28 +65,30 @@ function CatalogoProductos() {
       <h1>Catálogo de Productos</h1>
       <div className='catalogo'>
         {productosDisponibles.map((producto) => (
-          <div key={producto.id} class="card">
-            <img src={producto.pathImg} class={producto.nombre} alt="..."/>
-            <div class="card-body">
-              <h5 class="card-title">{producto.nombre}</h5>
-              <p class="card-text">{producto.descripcion}</p>
-              <p class="card-text"><small class="text-muted"><strong>Precio:</strong> ${producto.precio}</small></p>
-            </div>
+          <div key={producto.id} className="card">
+            <img src={producto.pathImg} className={producto.nombre} alt={producto.nombre}/>
+            <div className="card-body">
+              <h5 className="card-title">{producto.nombre}</h5>
+              <p className="card-text">{producto.descripcion}</p>
+              <p className="card-text"><small className="text-muted"><strong>Precio:</strong> ${producto.precio}</small></p>
+            </div>          
           <div>
               <label>
                 Cantidad:
                 <input
                   id={`cantidad-${producto.id}`}
                   type="number"
-                  min="1"
-                  defaultValue={1}
-                  onChange={(e) => actualizarCantidad(producto.id, e.target.value)}
+                  min="0"
+                  defaultValue={0}
+                  onChange={ (e) => { actualizarCantidad(producto.id, e.target.value);calcularPrecioTotal()} } //REVISAR
                 />
               </label>
               <button
                 onClick={() => {
                   const cantidad = document.querySelector(`#cantidad-${producto.id}`).value;
-                  agregarProducto(producto, cantidad);
+                  if (cantidad > 0) {
+                    agregarProducto(producto, cantidad);
+                  } 
                 }}
               >
                 Seleccionar
