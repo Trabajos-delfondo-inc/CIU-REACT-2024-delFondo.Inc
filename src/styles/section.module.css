@@ -1,0 +1,78 @@
+:root{
+    --letraColorOscuro: black;
+    --letraColorClaro: white;
+    --fondoClaro: rgb(193, 127, 12);
+    --tituloSize: 20px;
+    --parrafoSize: 20px;
+    --separacion: 80px;
+    --altoSeccion: 50vh;
+}
+
+* {
+    margin:0;
+    padding:0;
+}
+
+.sectionA{
+    width: 100%;
+    min-height: var(--altoSeccion);
+    padding: 10px;
+    color: var(--letraColorOscuro);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.sectionB{
+    width: 100%;
+    min-height: var(--altoSeccion);
+    padding: 10px;
+    color: var(--letraColorClaro);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+.titulo{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: var(--tituloSize);
+}
+
+.contenedorDoble{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--separacion);
+}
+
+.item{
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.item p{
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: var(--parrafoSize);
+    text-align: justify;
+    justify-content: start;
+    align-items: center;
+}
+
+.item iframe{
+    width: 100%;
+}
+
+.item img{
+    width: 100%;
+    height: auto;
+}
