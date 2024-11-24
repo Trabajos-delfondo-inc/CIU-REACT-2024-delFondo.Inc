@@ -1,53 +1,54 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-function Catalogo() {
-  const [productos, setProductos] = useState([]);
-  const [seleccionados, setSeleccionados] = useState([]);
-  const [total, setTotal] = useState(0);
+function CatalogoProductos() {
+  const [productosDisponibles, setProductosDisponibles] = useState([]);
+  const [productosSeleccionados, setProductosSeleccionados] = useState([]);
+  const [precioTotal, setPrecioTotal] = useState(0);
 
   useEffect(() => {
     fetch('http://localhost:5000/productos')
       .then((response) => response.json())
-      .then((data) => setProductos(data))
-      .catch((err) => console.error('Error al cargar productos:', err));
+      .then((data) => setProductosDisponibles(data))
+      .catch((err) => console.error('Error al cargar los productos:', err));
   }, []);
 
-  const handleSeleccionarProducto = (producto, cantidad) => {
-    const nuevoSeleccionado = { ...producto, cantidad: cantidad };
-    setSeleccionados((prev) => {
-      const existe = prev.find((item) => item.id === producto.id);
-      if (existe) {
-        return prev.map((item) =>
-          item.id === producto.id ? nuevoSeleccionado : item
+  const agregarProducto = (producto, cantidad = 1) => {
+    const productoConCantidad = { ...producto, cantidad: parseInt(cantidad) || 1 };
+    setProductosSeleccionados((productosPrevios) => {
+      const productoExistente = productosPrevios.find((item) => item.id === producto.id);
+      if (productoExistente) {
+        return productosPrevios.map((item) =>
+          item.id === producto.id ? productoConCantidad : item
         );
       }
-      return [...prev, nuevoSeleccionado];
+      return [...productosPrevios, productoConCantidad];
     });
   };
 
-  const handleCantidadChange = (id, cantidad) => {
-    setSeleccionados((prev) =>
-      prev.map((item) =>
-        item.id === id ? { ...item, cantidad: parseInt(cantidad) } : item
+  const actualizarCantidad = (idProducto, nuevaCantidad) => {
+    const cantidadNumerica = parseInt(nuevaCantidad) || 0;
+    setProductosSeleccionados((productosPrevios) =>
+      productosPrevios.map((producto) =>
+        producto.id === idProducto ? { ...producto, cantidad: cantidadNumerica } : producto
       )
     );
   };
 
   const calcularPrecioTotal = () => {
-    const totalCalculado = seleccionados.reduce(
+    const totalCalculado = productosSeleccionados.reduce(
       (total, producto) => total + producto.precio * producto.cantidad,
       0
     );
-    setTotal(totalCalculado);
+    setPrecioTotal(totalCalculado);
   };
-  console.log(productos)
+  console.log(productosDisponibles)
+
   return (
     <div>
       <h1>Catálogo de Productos</h1>
       <div className="row">
-        {productos.map((producto) => (
-
+        {productosDisponibles.map((producto) => (
           <div
             key={producto.id}
             style={{
@@ -68,18 +69,18 @@ function Catalogo() {
               <label>
                 Cantidad:
                 <input
+                  id={`cantidad-${producto.id}`}
                   type="number"
                   min="1"
                   defaultValue={1}
-                  onChange={(e) =>
-                    handleCantidadChange(producto.id, e.target.value)
-                  }
+                  onChange={(e) => actualizarCantidad(producto.id, e.target.value)}
                 />
               </label>
               <button
-                onClick={() =>
-                  handleSeleccionarProducto(producto, producto.cantidad)
-                }
+                onClick={() => {
+                  const cantidad = document.querySelector(`#cantidad-${producto.id}`).value;
+                  agregarProducto(producto, cantidad);
+                }}
               >
                 Seleccionar
               </button>
@@ -91,19 +92,19 @@ function Catalogo() {
         ))}
       </div>
 
-      {/* Botón para calcular precio total */}
+      {/* Botón que calcula el precio total */}
       <div className="mt-4">
         <button onClick={calcularPrecioTotal} className="btn btn-primary">
           Calcular Precio Total
         </button>
       </div>
 
-      {/* Mostrar el precio total calculado */}
+      {/* Acá se muestra el total calculado */}
       <div className="mt-3">
-        <h4>Precio Total: ${total}</h4>
+        <h4>Precio Total: ${precioTotal}</h4>
       </div>
     </div>
   );
 }
 
-export default Catalogo;
+export default CatalogoProductos;
