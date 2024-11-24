@@ -1,7 +1,8 @@
 :root{
     --letraColorOscuro: black;
     --letraColorClaro: white;
-    --fondoClaro: rgb(193, 127, 12);
+    --fondoClaro: white;
+    --fondoOscuro: black;
     --tituloSize: 20px;
     --parrafoSize: 20px;
     --separacion: 80px;
@@ -15,24 +16,26 @@
 
 .sectionA{
     width: 100%;
+    margin: auto;
     min-height: var(--altoSeccion);
     padding: 10px;
     color: var(--letraColorOscuro);
     text-align: center;
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--fondoClaro);
 }
 
 .sectionB{
     width: 100%;
+    margin: auto;
     min-height: var(--altoSeccion);
     padding: 10px;
     color: var(--letraColorClaro);
     text-align: center;
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: var(--fondoOscuro);
 }
 
 .titulo{
@@ -45,10 +48,24 @@
 }
 
 .contenedorDoble{
+    width: 80%;
+    margin: auto;
+    padding: 20px;
     display:flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     gap: var(--separacion);
+}
+
+.contenedorSimple{
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .item{

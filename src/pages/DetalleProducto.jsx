@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import SectionB from '../components/SectionB';
+import SectionA from '../components/SectionA';
 
 function DetalleProducto() {
   const { id } = useParams();
@@ -16,9 +18,12 @@ function DetalleProducto() {
 
   return (
     <div>
-      <h1>{producto.nombre}</h1>
-      <p>{producto.descripcion}</p>
-      <p>Precio: ${producto.precio}</p>
+      <SectionA 
+      titulo={<h1>{producto.nombre}{producto.id}</h1>}
+      elemento={<img src={producto.pathImg} className={producto.nombre} alt={producto.nombre}/>}
+      texto={<p>{producto.descripcion}</p>}
+      />
+      <div><p>Precio: ${producto.precio}</p></div>
     </div>
   );
 }
