@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import '../styles/styles.css'
 
 function CatalogoProductos() {
   const [productosDisponibles, setProductosDisponibles] = useState([]);
@@ -46,26 +47,29 @@ function CatalogoProductos() {
 
   return (
     <div>
+      {/* Botón que calcula el precio total */}
+      <div className="mt-4">
+        <button onClick={calcularPrecioTotal} className="btn btn-primary">
+          Calcular Precio Total
+        </button>
+      </div>
+
+      {/* Acá se muestra el total calculado */}
+      <div className="mt-3">
+        <h4>Precio Total: ${precioTotal}</h4>
+      </div>
+      
       <h1>Catálogo de Productos</h1>
-      <div className="row">
+      <div className='catalogo'>
         {productosDisponibles.map((producto) => (
-          <div
-            key={producto.id}
-            style={{
-              border: '1px solid #ddd',
-              padding: '16px',
-              margin: '8px',
-              borderRadius: '8px',
-              boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-            }}
-          >
-            <h3>{producto.nombre}</h3>
-            <p>{producto.descripcion}</p>
-            <p>
-              <strong>Precio:</strong> ${producto.precio}
-            </p>
-            <img src={producto.pathImg} alt={producto.nombre} />
-            <div>
+          <div key={producto.id} class="card">
+            <img src={producto.pathImg} class={producto.nombre} alt="..."/>
+            <div class="card-body">
+              <h5 class="card-title">{producto.nombre}</h5>
+              <p class="card-text">{producto.descripcion}</p>
+              <p class="card-text"><small class="text-muted"><strong>Precio:</strong> ${producto.precio}</small></p>
+            </div>
+          <div>
               <label>
                 Cantidad:
                 <input
@@ -90,18 +94,6 @@ function CatalogoProductos() {
             </Link>
           </div>
         ))}
-      </div>
-
-      {/* Botón que calcula el precio total */}
-      <div className="mt-4">
-        <button onClick={calcularPrecioTotal} className="btn btn-primary">
-          Calcular Precio Total
-        </button>
-      </div>
-
-      {/* Acá se muestra el total calculado */}
-      <div className="mt-3">
-        <h4>Precio Total: ${precioTotal}</h4>
       </div>
     </div>
   );
