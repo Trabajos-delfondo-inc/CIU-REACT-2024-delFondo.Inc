@@ -10,10 +10,6 @@ para gestionar productos, fabricantes y componentes desea ahora un frontend en R
 permita a los usuarios visualizar la información almacenada en la API de gestión de
 productos. El sistema solo necesita mostrar información, sin opciones de modificación ni
 eliminación, enfocándose en la navegación y presentación del catálogo de productos.
-Objetivo: Construir una aplicación web en React que consuma el backend de la API de
-gestión de productos. La aplicación permitirá a los usuarios navegar por un catálogo de
-productos, visualizar detalles de productos específicos y sus fabricantes y componentes
-asociados.
 
 ### Objetivo
 
