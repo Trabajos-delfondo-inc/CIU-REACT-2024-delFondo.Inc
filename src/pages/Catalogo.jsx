@@ -13,6 +13,12 @@ function CatalogoProductos() {
       .then((data) => setProductosDisponibles(data))
       .catch((err) => console.error('Error al cargar los productos:', err));
   }, []);
+  
+  /*DESCOMENTAR PARA LOGRAR EL EFECTO DE ACTUALIZACION DE PRECIO AL CAMBIAR LA CANTIDAD DE ITEMS
+  useEffect(()=>{
+    calcularPrecioTotal()
+    console.log(productosSeleccionados)
+  },[productosSeleccionados]);*/
 
   const agregarProducto = (producto, cantidad) => {
     const productoConCantidad = { ...producto, cantidad: parseInt(cantidad)};
@@ -34,7 +40,6 @@ function CatalogoProductos() {
         producto.id === idProducto ? { ...producto, cantidad: cantidadNumerica } : producto
       )
     );
-    console.log(productosSeleccionados)
   };
 
   const calcularPrecioTotal = () => {
@@ -80,7 +85,7 @@ function CatalogoProductos() {
                   type="number"
                   min="0"
                   defaultValue={0}
-                  onChange={ (e) => { actualizarCantidad(producto.id, e.target.value);calcularPrecioTotal()} } //REVISAR
+                  onChange={ e =>  actualizarCantidad(producto.id, e.target.value) }
                 />
               </label>
               <button
