@@ -19,12 +19,13 @@ function Inicio() {
   return (
     <div>
         <SectionA 
-          titulo={<h1>DelFondo.inc - Soluciones tecnológicas </h1>}
-          texto={<p> Somos una empresa lider de productos informaticos para la industria. Proveemos soluciones y damos soporte para que tu empresa pueda sistematizar procesos, prevenir riesgos o generar mecanismos de seguridad a costos bajos.<br/>Ofrecemos productos de excelente calidad y asistimos con implementaciones dentro del marco de ITIL.</p>}
+          titulo={<h1>DelFondo.inc - Soluciones tecnológicas</h1>}
+          texto={<p> <h2>¿Quiénes somos?</h2><br />
+             Somos una empresa líder de productos informáticos para la industria. Proveemos soluciones y damos soporte para que tu empresa pueda sistematizar procesos, prevenir riesgos o generar mecanismos de seguridad a costos bajos.<br/>Ofrecemos productos de excelente calidad y asistimos con implementaciones dentro del marco de ITIL.</p>}
           elemento={<img src="https://www.brysonhillsperu.com/wp-content/uploads/2023/10/empresas-industriales.jpg" alt="viva la pepa" />}
         />
         <SectionB 
-          titulo={<h1>¿Porque es importante contar con nosotros?</h1>}
+          titulo={<h1>¿Por qué es importante contar con nosotros?</h1>}
           elemento={<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video de presentación" width="600" height="315" allowFullScreen></iframe>}
           texto={<p>
             <ul><h3>Productos de alta calidad:</h3>Solo trabajamos con productos de la más alta calidad, garantizando eficiencia y durabilidad.</ul> 
@@ -41,12 +42,12 @@ function Inicio() {
           elemento={<img src="https://www.dikaestudio.com/wp-content/uploads/2018/06/Logos-Famosos.-Curiosidades-1.jpg" alt="empresas-que-nos-respaldan" />}
         />
         <SectionB
-          titulo={<h1>¿Que productos Ofrecemos?</h1>}
+          titulo={<h1>¿Qué productos ofrecemos?</h1>}
           elemento={<Carousel images={images} />}
-          texto={<p>Hola</p>}
+          texto={<p>Estos son algunos de nuestra amplia gama de productos, que le permiten a tu empresa evolucionar hacia un entorno más automatizado y seguro, facilitando la gestión y reduciendo costos operativos.</p>}
         />
         <SectionA 
-          titulo={<h1>Contacta con nosotros</h1>}
+          titulo={<h1>Contactá con nosotros</h1>}
           texto={
           <div>
             <form action="#">
@@ -54,7 +55,7 @@ function Inicio() {
                   <label for="email" class="form-label">Email:</label>
                   <input type="email" class="form-control" id="email" placeholder="Enter email" name="email"/>
                 </div>
-                <label for="comment">Comentarios:</label>
+                <label for="comment">Dejanos tu mensaje:</label>
                 <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
