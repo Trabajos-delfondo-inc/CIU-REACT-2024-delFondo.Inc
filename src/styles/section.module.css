@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap');
+
 
 :root{
     --letraColorOscuro: black;
@@ -10,6 +12,7 @@
     --separacion: 80px;
     --altoSeccion: 50vh;
     --fuente:'Pacifico', cursive;
+    --fuente2:'Nunito Sans';
 }
 
 * {
@@ -54,7 +57,7 @@
 }
 
 .sectionC h2{
-    font-family: 'Pacifico', cursive;
+    font-family: 'Nunito Sans', cursive;
 }
 
 .titulo{
@@ -99,7 +102,7 @@
     word-wrap: break-word;
     overflow-wrap: break-word;
     font-size: var(--parrafoSize);
-    font-family: 'Pacifico', cursive;
+    font-family: 'Nunito Sans', cursive;
     text-align: justify;
     justify-content: start;
     align-items: center;

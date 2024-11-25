@@ -8,6 +8,7 @@
     --separacion: 80px;
     --altoSeccion: 50vh;
     --fuente:@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    --fuente2:@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap');
 }
 
 * {
