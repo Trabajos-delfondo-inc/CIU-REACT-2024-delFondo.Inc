@@ -19,18 +19,25 @@ function Inicio() {
   return (
     <div>
         <SectionA 
-          titulo={<h1>¿Buscas profesionales?</h1>}
+          titulo={<h1>DelFondo.inc - Soluciones tecnológicas </h1>}
           texto={<p> Somos una empresa lider de productos informaticos para la industria. Proveemos soluciones y damos soporte para que tu empresa pueda sistematizar procesos, prevenir riesgos o generar mecanismos de seguridad a costos bajos.<br/>Ofrecemos productos de excelente calidad y asistimos con implementaciones dentro del marco de ITIL.</p>}
           elemento={<img src="https://www.brysonhillsperu.com/wp-content/uploads/2023/10/empresas-industriales.jpg" alt="viva la pepa" />}
         />
         <SectionB 
           titulo={<h1>¿Porque es importante contar con nosotros?</h1>}
           elemento={<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video de presentación" width="600" height="315" allowFullScreen></iframe>}
-          texto={<p>Insertar un texto</p>}
+          texto={<p>
+            <ul><h3>Productos de alta calidad:</h3>Solo trabajamos con productos de la más alta calidad, garantizando eficiencia y durabilidad.</ul> 
+            <ul><h3>Soporte especializado:</h3> Te acompañamos en todo momento, asegurando una implementación exitosa conforme a las mejores prácticas de ITIL.</ul>
+            <ul><h3>Soluciones a medida: </h3> Nos adaptamos a las necesidades específicas de tu negocio, brindando herramientas personalizadas para mejorar cada uno de tus procesos.</ul> 
+            </p>}
         />
         <SectionA 
           titulo={<h1>Quienes nos avalan</h1>}
-          texto={<p>Insertar un texto</p>}
+          texto={<p>En <span>DelFondo.Inc</span>, nuestra experiencia y compromiso con la excelencia son respaldados por la confianza de nuestros clientes, quienes confían en nuestros productos y servicios para transformar sus procesos y garantizar la seguridad de sus sistemas. <br />
+           A lo largo de los años, hemos trabajado con empresas de diversas industrias, proporcionando soluciones que no solo cumplen, sino que superan las expectativas de nuestros clientes. <br />
+
+           Todos ellos encuentran en <span>DelFondo.Inc</span> un socio tecnológico confiable.</p>}
           elemento={<img src="https://www.dikaestudio.com/wp-content/uploads/2018/06/Logos-Famosos.-Curiosidades-1.jpg" alt="empresas-que-nos-respaldan" />}
         />
         <SectionB
