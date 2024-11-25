@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/styles.css'
 import catalogoStyle from '../styles/catalogo.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -56,20 +55,10 @@ function CatalogoProductos() {
 
 
   return (
-    <div className='container my-4'>
-      {/* Botón que calcula el precio total */}
-      <div className="mt-4">
-        <button onClick={calcularPrecioTotal} className="btn btn-primary">
-          Ir al carrito
-        </button>
-      </div>
-
-      {/* Acá se muestra el total calculado */}
-      <div className="mt-3 ">
-        <h4>Precio Total: ${precioTotal}</h4>
-      </div>
-      
+    <div>
+    <div className={catalogoStyle.titulo}>
       <h1>Catálogo de Productos</h1>
+    </div>
       <div className={catalogoStyle.catalogo}>
         {productosDisponibles.map((producto) => (
           <div key={producto.id} className="card">
@@ -105,6 +94,12 @@ function CatalogoProductos() {
             </div>
           </div>
         ))}
+      </div>
+      <div className="d-flex justify-content-end align-items sticky-bottom">
+          <button  className=' btn btn-dark ms-1 mb-2' disabled>Precio Total: ${precioTotal}</button>
+          <button onClick={calcularPrecioTotal} className="btn btn-primary ms-1 mb-2">
+          Ir al carrito
+        </button>
       </div>
     </div>
   );

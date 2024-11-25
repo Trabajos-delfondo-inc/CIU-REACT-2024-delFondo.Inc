@@ -3,4 +3,29 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px;
+    width: 80%;
+    margin: auto;
 }
+
+.titulo{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(174, 196, 214);
+    color: beige;
+}
+
+@media (max-width: 768px) {
+    .catalogo {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+  
+  @media (max-width: 420px) {
+    .catalogo {
+      grid-template-columns: 1fr; 
+    }
+  }
+
