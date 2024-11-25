@@ -13,7 +13,7 @@ function Inicio() {
     { src: '/public/images/productos/controlador-iluminacion-edit.png', alt: 'Control De Iluminacion' ,video: "https://www.youtube.com/watch?v=Z5LzDhCS674"},
     { src: '/public/images/productos/controlador-riego-edit.png', alt: 'Controlador De Riego' ,video: "https://www.youtube.com/watch?v=cp3rojEbl-Y"},
     { src: '/public/images/productos/sensor-ambiental-edit.png', alt: 'Sensor Ambiental' ,video: "https://www.youtube.com/watch?v=z2iJKJmT82w"},
-    { src: '/public/images/productos/smartwatch.jpg', alt: 'Smartwatch' ,video: "https://www.youtube.com/watch?v=M-AsftRa78U"},
+    { src: '/public/images/productos/smartwatch-edit.png', alt: 'Smartwatch' ,video: "https://www.youtube.com/watch?v=M-AsftRa78U"},
     { src: '/public/images/productos/termostato-edit.png', alt: 'Termostato' ,video: "https://www.youtube.com/watch?v=Gv0Fqgj_VGo"},
   ];
   return (
