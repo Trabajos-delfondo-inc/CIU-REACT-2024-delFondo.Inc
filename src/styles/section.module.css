@@ -20,6 +20,12 @@
     padding:0;
 }
 
+.separador{
+    width: 80%;
+    margin-left: 13%;
+    
+}
+
 .sectionA{
     width: 100%;
     margin: auto;
@@ -85,7 +91,7 @@
     margin: auto;
     padding: 20px;
     display:flex;
-    flex-direction: row;
+    flex-direction:row;
     justify-content: center;
     align-items: center;
 }
@@ -117,6 +123,11 @@
     border-style:solid;
     border-width: 4px;
     border-color: grey;
+}
+
+.icono{
+    width: 51px;
+    height: 40px;
 }
 
 .item img{

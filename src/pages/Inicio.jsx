@@ -49,20 +49,33 @@ function Inicio() {
         <SectionA 
           titulo={<h1>Contactá con nosotros</h1>}
           texto={
-          <div>
-            <form action="#">
-                <div class="mb-3 mt-3">
-                  <label for="email" class="form-label">Email:</label>
-                  <input type="email" class="form-control" id="email" placeholder="Enter email" name="email"/>
-                </div>
-                <label for="comment">Dejanos tu mensaje:</label>
-                <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
-          </div>}
+            <div>
+              <div>
+                <hr />
+                <p>Direccion: Paraná 552, C1017 San Nicolas, Cdad. Autónoma de Buenos Aires</p>
+                <hr />
+                <p>Telefono: +54 9 11-2367-0839 </p>
+                <hr />
+                <p>Horarios de atencion:</p>
+                <p>Lunes a Viernes | 08:00hs - 20:00hs |</p>
+                <p>Sabados | 13:00hs - 18:00hs |</p>
+                <hr />
+              </div>
+              <div>
+                <form action="#">
+                    <div class="mb-3 mt-3">
+                      <label for="email" class="form-label">Email:</label>
+                      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email"/>
+                    </div>
+                    <label for="comment">Dejanos tu mensaje:</label>
+                    <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+              </div>
+            </div>
+          }
           elemento={<iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Paran%C3%A1%20552,%20C1017%20San%20Nicolas,%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires+(DelFondo.inc)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" className={Style.mapa} width="600" height="400" title="Mapa de la empresa" allowFullScreen></iframe>}
         />
-       
     </div>
   );
 }

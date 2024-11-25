@@ -78,31 +78,32 @@ function CatalogoProductos() {
               <h5 className="card-title">{producto.nombre}</h5>
               <p className="card-text">{producto.descripcion}</p>
               <p className="card-text"><small className="text-muted"><strong>Precio:</strong> ${producto.precio}</small></p>
-            </div>          
-          <div>
-          <label>
-            Cantidad:
-              <input
-                  id={`cantidad-${producto.id}`}
-                  type="number"
-                  min="0"
+            </div> 
+            <div>
+              <label>
+                Cantidad:
+                <input
+                    id={`cantidad-${producto.id}`}
+                    type="number"
+                    min="0"
+                    class="form-control w-50"
                   defaultValue={0}
                   onChange={ e =>  actualizarCantidad(producto.id, e.target.value) }
                 />
-          </label>
-          <button
+              </label>
+              <button
                 onClick={() => {
                   const cantidad = document.querySelector(`#cantidad-${producto.id}`).value;
                   if (cantidad > 0) {
                     agregarProducto(producto, cantidad);
                   } 
                 }}
-          >
-          Seleccionar
-          </button>
+              >
+              Seleccionar
+              </button>
+              <Link to={`/productos/${producto.id}`} className="btn btn-info mt-2">Ver más detalles</Link>
+            </div>
           </div>
-          <Link to={`/productos/${producto.id}`} className="btn btn-info mt-2">Ver más detalles</Link>
-      </div>
         ))}
       </div>
     </div>
