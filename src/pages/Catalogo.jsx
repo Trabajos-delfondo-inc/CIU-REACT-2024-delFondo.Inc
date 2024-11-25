@@ -60,12 +60,12 @@ function CatalogoProductos() {
       {/* Botón que calcula el precio total */}
       <div className="mt-4">
         <button onClick={calcularPrecioTotal} className="btn btn-primary">
-          Calcular Precio Total
+          Ir al carrito
         </button>
       </div>
 
       {/* Acá se muestra el total calculado */}
-      <div className="mt-3">
+      <div className="mt-3 ">
         <h4>Precio Total: ${precioTotal}</h4>
       </div>
       

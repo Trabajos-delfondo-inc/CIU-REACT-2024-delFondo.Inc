@@ -1,20 +1,31 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import SectionC from '../components/SectionC';
+import { Link } from 'react-router-dom';
 
 function DetalleProducto() {
   const { id } = useParams();
   const [producto, setProducto] = useState(null);
-
-  useEffect(() => {
+  const [prodFab, setProdFab] = useState([]);
+  const [prodCom, setProdCom] = useState([]);
+  useEffect( () => {
     fetch(`http://localhost:5000/productos/${id}`)
       .then(response => response.json())
       .then(data => setProducto(data))
       .catch(err => console.error('Error al cargar el producto:', err));
+
+     fetch(`http://localhost:5000/productos/${id}/fabricantes`)
+      .then(response => response.json())
+      .then(data => setProdFab(data));
+
+     fetch(`http://localhost:5000/productos/${id}/componentes`)
+      .then(response => response.json())
+      .then(data => setProdCom(data));
   }, [id]);
 
   if (!producto) return <p>Cargando...</p>;
-
+  console.log(prodFab)
+  //console.log(prodCom)
   return (
     <div>
       <SectionC 
@@ -24,6 +35,18 @@ function DetalleProducto() {
       
       />
       <div><p>Precio: ${producto.precio}</p></div>
+      <div>
+      <h1>Fabricantes y Componentes</h1>
+      <h2>Fabricantes</h2>
+      <ul>
+          {prodFab.Fabricantes && prodFab.Fabricantes.map(e => <ul><Link to={`/productos/${e.id}/fabricantes`} className="btn btn-light mt-2">{e.nombre}</Link></ul>)}
+        </ul>
+        <h2>Componentes</h2>
+        <ul>
+          {prodCom.Componentes && prodCom.Componentes.map(e => <ul><Link to={`/productos/${e.id}/componentes`} className="btn btn-light mt-2">{e.nombre}</Link></ul>)}
+        </ul>
+        
+    </div>
     </div>
   );
 }
