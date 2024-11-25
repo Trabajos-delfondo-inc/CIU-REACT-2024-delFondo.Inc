@@ -1,6 +1,5 @@
 import SectionA from '../components/SectionA';
 import SectionB from '../components/SectionB';
-import SectionC from '../components/SectionC';
 import Carousel from '../components/carousel';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 function Inicio() {

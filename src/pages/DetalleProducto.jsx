@@ -24,31 +24,31 @@ function DetalleProducto() {
   }, [id]);
 
   if (!producto) return <p>Cargando...</p>;
-  console.log(prodFab)
-  //console.log(prodCom)
   return (
     <div>
       <SectionC 
       titulo={<h1>{producto.nombre}</h1>}
       elemento={<img src={"/" + producto.pathImg}  alt={producto.nombre}/>}
-      texto={<p>{producto.descripcion}</p>}
-      
-      />
-      <div><p>Precio: ${producto.precio}</p></div>
-      <div>
-      <h1>Fabricantes y Componentes</h1>
-      <h2>Fabricantes</h2>
-      <ul>
-          {prodFab.Fabricantes && prodFab.Fabricantes.map(e => <ul><Link to={`/productos/${e.id}/fabricantes`} className="btn btn-light mt-2">{e.nombre}</Link></ul>)}
-        </ul>
-        <h2>Componentes</h2>
+      texto={
+        <div>
+          <p>producto con numero de identificación {producto.id}</p>
+          <p>{producto.descripcion}</p>
+        <h2>Estos son los fabricantes</h2>
         <ul>
-          {prodCom.Componentes && prodCom.Componentes.map(e => <ul><Link to={`/productos/${e.id}/componentes`} className="btn btn-light mt-2">{e.nombre}</Link></ul>)}
-        </ul>
-        
-    </div>
+            {prodFab.Fabricantes && prodFab.Fabricantes.map(e => <ul><Link to={`/productos/${e.id}/fabricantes`} className="btn btn-light mt-2">{e.nombre}</Link></ul>)}
+          </ul>
+          <h2>Estos son los componentes</h2>
+          <ul>
+            {prodCom.Componentes && prodCom.Componentes.map(e => <ul><Link to={`/productos/${e.id}/componentes`} className="btn btn-light mt-2">{e.nombre}</Link></ul>)}
+          </ul>
+          <div><p>Precio: ${producto.precio}</p></div> 
+      </div>
+      }/>
+      
     </div>
   );
 }
+
+{/*  */}
 
 export default DetalleProducto;
