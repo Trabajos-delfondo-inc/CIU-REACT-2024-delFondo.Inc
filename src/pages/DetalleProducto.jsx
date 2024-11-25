@@ -33,6 +33,7 @@ function DetalleProducto() {
         <div>
           <p>producto con numero de identificación {producto.id}</p>
           <p>{producto.descripcion}</p>
+          <div><p>Precio: ${producto.precio}</p></div> 
         <h2>Estos son los fabricantes</h2>
         <ul>
             {prodFab.Fabricantes && prodFab.Fabricantes.map(e => <ul><Link to={`/productos/${e.id}/fabricantes`} className="btn btn-light mt-2">{e.nombre}</Link></ul>)}
@@ -41,7 +42,6 @@ function DetalleProducto() {
           <ul>
             {prodCom.Componentes && prodCom.Componentes.map(e => <ul><Link to={`/productos/${e.id}/componentes`} className="btn btn-light mt-2">{e.nombre}</Link></ul>)}
           </ul>
-          <div><p>Precio: ${producto.precio}</p></div> 
       </div>
       }/>
       

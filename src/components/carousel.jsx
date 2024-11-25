@@ -7,7 +7,11 @@ const Carousel = ({ images }) => {
       <div className="carousel-inner">
         {images.map((image, index) => (
           <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
-            <div className="d-flex justify-content-center align-items-center"><img src={image.src} className="d-block w-50" alt={image.alt || 'Carousel Image '} /></div>
+            <div className="d-flex justify-content-center align-items-center">
+              <a href= {image.video} target="_blank" className="d-block w-50">
+                <img src={image.src} className="d-block w-75" alt={image.alt || 'Carousel Image '}/>
+              </a>
+            </div>
           </div>
         ))}
       </div>

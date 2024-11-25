@@ -1,12 +1,20 @@
 import SectionA from '../components/SectionA';
 import SectionB from '../components/SectionB';
 import Carousel from '../components/carousel';
+import Style from '../styles/section.module.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 function Inicio() {
   const images = [
-    { src: '/public/images/productos/altavoz-inteligente-edit.png', alt: 'Altavoz' },
-    { src: '/public/images/productos/camara-seguridad.jpg', alt: 'Camara' },
-    { src: '/public/images/productos/smartwatch.jpg', alt: 'Laptop' }
+    { src: '/public/images/productos/altavoz-inteligente-edit.png', alt: 'Altavoz' ,video: "https://www.youtube.com/watch?v=pSYlRn6EXUM"},
+    { src: '/public/images/productos/camara-seguridad-edit.png', alt: 'Camara De Seguridad',video: "https://www.youtube.com/watch?v=h3Bo0wtVWdg"},
+    { src: '/public/images/productos/camara-accion-edit.png', alt: 'Camara De Accion' ,video: "https://www.youtube.com/watch?v=cQWzcWg76-c"},
+    { src: '/public/images/productos/cargador-inalambrico-edit.png', alt: 'Cargador Inalambrico' ,video:"https://www.youtube.com/watch?v=PiNHPiPtEwI"},
+    { src: '/public/images/productos/control-acceso-edit.png', alt: 'Control De Acceso' ,video:"https://www.youtube.com/watch?v=KMsr3opKOtM"},
+    { src: '/public/images/productos/controlador-iluminacion-edit.png', alt: 'Control De Iluminacion' ,video: "https://www.youtube.com/watch?v=Z5LzDhCS674"},
+    { src: '/public/images/productos/controlador-riego-edit.png', alt: 'Controlador De Riego' ,video: "https://www.youtube.com/watch?v=cp3rojEbl-Y"},
+    { src: '/public/images/productos/sensor-ambiental-edit.png', alt: 'Sensor Ambiental' ,video: "https://www.youtube.com/watch?v=z2iJKJmT82w"},
+    { src: '/public/images/productos/smartwatch.jpg', alt: 'Smartwatch' ,video: "https://www.youtube.com/watch?v=M-AsftRa78U"},
+    { src: '/public/images/productos/termostato-edit.png', alt: 'Termostato' ,video: "https://www.youtube.com/watch?v=Gv0Fqgj_VGo"},
   ];
   return (
     <div>
@@ -44,7 +52,7 @@ function Inicio() {
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
           </div>}
-          elemento={<iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Paran%C3%A1%20552,%20C1017%20San%20Nicolas,%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires+(DelFondo.inc)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="600" height="400" title="Mapa de la empresa" allowFullScreen></iframe>}
+          elemento={<iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Paran%C3%A1%20552,%20C1017%20San%20Nicolas,%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires+(DelFondo.inc)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" className={Style.mapa} width="600" height="400" title="Mapa de la empresa" allowFullScreen></iframe>}
         />
        
     </div>
