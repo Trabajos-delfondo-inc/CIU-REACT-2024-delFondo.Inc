@@ -5,16 +5,16 @@ import Style from '../styles/section.module.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 function Inicio() {
   const images = [
-    { src: '/public/images/productos/altavoz-inteligente-edit.png', alt: 'Altavoz' ,video: "https://www.youtube.com/watch?v=pSYlRn6EXUM"},
-    { src: '/public/images/productos/camara-seguridad-edit.png', alt: 'Camara De Seguridad',video: "https://www.youtube.com/watch?v=h3Bo0wtVWdg"},
-    { src: '/public/images/productos/camara-accion-edit.png', alt: 'Camara De Accion' ,video: "https://www.youtube.com/watch?v=cQWzcWg76-c"},
-    { src: '/public/images/productos/cargador-inalambrico-edit.png', alt: 'Cargador Inalambrico' ,video:"https://www.youtube.com/watch?v=PiNHPiPtEwI"},
-    { src: '/public/images/productos/control-acceso-edit.png', alt: 'Control De Acceso' ,video:"https://www.youtube.com/watch?v=KMsr3opKOtM"},
-    { src: '/public/images/productos/controlador-iluminacion-edit.png', alt: 'Control De Iluminacion' ,video: "https://www.youtube.com/watch?v=Z5LzDhCS674"},
-    { src: '/public/images/productos/controlador-riego-edit.png', alt: 'Controlador De Riego' ,video: "https://www.youtube.com/watch?v=cp3rojEbl-Y"},
-    { src: '/public/images/productos/sensor-ambiental-edit.png', alt: 'Sensor Ambiental' ,video: "https://www.youtube.com/watch?v=z2iJKJmT82w"},
-    { src: '/public/images/productos/smartwatch-edit.png', alt: 'Smartwatch' ,video: "https://www.youtube.com/watch?v=M-AsftRa78U"},
-    { src: '/public/images/productos/termostato-edit.png', alt: 'Termostato' ,video: "https://www.youtube.com/watch?v=Gv0Fqgj_VGo"},
+    { src: '/public/images/productos/altavoz-inteligente-edit.png', alt: 'Altavoz' ,video: "https://www.youtube.com/watch?v=pSYlRn6EXUM", title:'https://www.youtube.com/watch?v=pSYlRn6EXUM'},
+    { src: '/public/images/productos/camara-seguridad-edit.png', alt: 'Camara De Seguridad',video: "https://www.youtube.com/watch?v=h3Bo0wtVWdg", title:'https://www.youtube.com/watch?v=h3Bo0wtVWdg'},
+    { src: '/public/images/productos/camara-accion-edit.png', alt: 'Camara De Accion' ,video: "https://www.youtube.com/watch?v=cQWzcWg76-c",title:'https://www.youtube.com/watch?v=cQWzcWg76-c'},
+    { src: '/public/images/productos/cargador-inalambrico-edit.png', alt: 'Cargador Inalambrico' ,video:"https://www.youtube.com/watch?v=PiNHPiPtEwI",title:'https://www.youtube.com/watch?v=cQWzcWg76-c'},
+    { src: '/public/images/productos/control-acceso-edit.png', alt: 'Control De Acceso' ,video:"https://www.youtube.com/watch?v=KMsr3opKOtM",title:'https://www.youtube.com/watch?v=KMsr3opKOtM'},
+    { src: '/public/images/productos/controlador-iluminacion-edit.png', alt: 'Control De Iluminacion' ,video: "https://www.youtube.com/watch?v=Z5LzDhCS674",title:'https://www.youtube.com/watch?v=Z5LzDhCS674'},
+    { src: '/public/images/productos/controlador-riego-edit.png', alt: 'Controlador De Riego' ,video: "https://www.youtube.com/watch?v=cp3rojEbl-Y",title:'https://www.youtube.com/watch?v=cp3rojEbl-Y'},
+    { src: '/public/images/productos/sensor-ambiental-edit.png', alt: 'Sensor Ambiental' ,video: "https://www.youtube.com/watch?v=z2iJKJmT82w",title:'https://www.youtube.com/watch?v=z2iJKJmT82w'},
+    { src: '/public/images/productos/smartwatch-edit.png', alt: 'Smartwatch' ,video: "https://www.youtube.com/watch?v=M-AsftRa78U",title:'https://www.youtube.com/watch?v=M-AsftRa78U'},
+    { src: '/public/images/productos/termostato-edit.png', alt: 'Termostato' ,video: "https://www.youtube.com/watch?v=Gv0Fqgj_VGo",title:'https://www.youtube.com/watch?v=Gv0Fqgj_VGo'},
   ];
   return (
     <div>

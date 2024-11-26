@@ -9,7 +9,7 @@ const Carousel = ({ images }) => {
           <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
             <div className="d-flex justify-content-center align-items-center">
               <a href= {image.video} target="_blank" className="d-block w-50">
-                <img src={image.src} className="d-block w-75" alt={image.alt || 'Carousel Image '}/>
+                <img src={image.src} className="d-block w-75" alt={image.alt || 'Carousel Image '} title={image.title}/>
               </a>
             </div>
           </div>
