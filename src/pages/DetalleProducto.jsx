@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import SectionC from '../components/SectionC';
 import { Link } from 'react-router-dom';
+import Style from '../styles/section.module.css';
 
 function DetalleProducto() {
   const { id } = useParams();
@@ -30,7 +31,8 @@ function DetalleProducto() {
       titulo={<h1>{producto.nombre}</h1>}
       elemento={
         <div>
-          <img src={"/" + producto.pathImg}  alt={producto.nombre}/>
+          <img src={"/" + producto.pathImg}  alt={producto.nombre} className={Style.imagenGrande}/>
+          <button  className=' btn btn-dark ms-1 mb-2'>Ver ficha tecnica</button>
         </div>
       }
       texto={
@@ -43,14 +45,18 @@ function DetalleProducto() {
           <div>
             <p>Precio: ${producto.precio}</p>
             <p>Precio Final En Cuotas: ${producto.precio * 1.6}</p> 
-            <p>Pago En Efectivo: ${producto.precio / 1.2}</p>
+            <p>Pago En Efectivo: ${parseInt(producto.precio / 1.2)}</p>
+            <hr />
+          </div>
+          <div >
+            <img src= '/public/images/productos/visa-logo.png' className = {Style.icono}  alt="logo de visa" />
+            <img src= '/public/images/productos/mastercard-logo.png' className={Style.icono} alt="logo de mastercard" />
+            <img src= '/public/images/productos/amex-logo.png' className={Style.icono} alt="logo de american express" />
+            <img src= '/public/images/productos/mp-logo.png' className={Style.icono} alt="logo de mercadopago" />
             <hr />
           </div>
           <div>
-            <p>Imagenes de tarjetas acceptadas</p>
-            <hr />
-          </div>
-          <div>
+            <img src="/public\images\productos\envio-icono.svg" alt="" />
             <p>Envios en Capital Federal: 1 a 2 dias habiles</p>
             <p>Envios a Provincia (incluyendo Uruguay(Borrar despues)):2 a 4 dias habiles</p>
             <hr />

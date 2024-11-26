@@ -22,7 +22,7 @@ function Inicio() {
           titulo={<h1>DelFondo.inc - Soluciones tecnológicas</h1>}
           texto={<p> <h2>¿Quiénes somos?</h2><br />
              Somos una empresa líder de productos informáticos para la industria. Proveemos soluciones y damos soporte para que tu empresa pueda sistematizar procesos, prevenir riesgos o generar mecanismos de seguridad a costos bajos.<br/>Ofrecemos productos de excelente calidad y asistimos con implementaciones dentro del marco de ITIL.</p>}
-          elemento={<img src="https://www.brysonhillsperu.com/wp-content/uploads/2023/10/empresas-industriales.jpg" alt="viva la pepa" />}
+          elemento={<img src="https://www.brysonhillsperu.com/wp-content/uploads/2023/10/empresas-industriales.jpg" alt="viva la pepa"  className={Style.imagenGrande}/>}
         />
         <SectionB 
           titulo={<h1>¿Por qué es importante contar con nosotros?</h1>}
@@ -39,7 +39,7 @@ function Inicio() {
            A lo largo de los años, hemos trabajado con empresas de diversas industrias, proporcionando soluciones que no solo cumplen, sino que superan las expectativas de nuestros clientes. <br />
 
            Todos ellos encuentran en <span>DelFondo.Inc</span> un socio tecnológico confiable.</p>}
-          elemento={<img src="https://www.dikaestudio.com/wp-content/uploads/2018/06/Logos-Famosos.-Curiosidades-1.jpg" alt="empresas-que-nos-respaldan" />}
+          elemento={<img src="https://www.dikaestudio.com/wp-content/uploads/2018/06/Logos-Famosos.-Curiosidades-1.jpg" alt="empresas-que-nos-respaldan"  className={Style.imagenGrande}/>}
         />
         <SectionB
           titulo={<h1>¿Qué productos ofrecemos?</h1>}
@@ -54,7 +54,9 @@ function Inicio() {
                 <hr />
                 <p>Direccion: Paraná 552, C1017 San Nicolas, Cdad. Autónoma de Buenos Aires</p>
                 <hr />
-                <p>Telefono: +54 9 11-2367-0839 </p>
+                <p> 
+                  Telefono:<img src="https://static.vecteezy.com/system/resources/thumbnails/018/930/564/small/whatsapp-logo-whatsapp-icon-whatsapp-transparent-free-png.png" alt="" className={Style.icono}/> +54 9 11-2367-0839 
+                </p>
                 <hr />
                 <p>Horarios de atencion:</p>
                 <p>Lunes a Viernes | 08:00hs - 20:00hs |</p>

@@ -16,18 +16,18 @@ function FabricantesYComponentes() {
   }, []);
 
   return (
-    <section className="container my-4">
-      <div>
-      <h1>Fabricantes y Componentes</h1>
-      <h2>Fabricantes</h2>
-      <ul>
-        {fabricantes.map(fab => <li key={fab.id}>{fab.nombre}</li>)}
-      </ul>
-      <h2>Componentes</h2>
-      <ul>
-        {componentes.map(comp => <li key={comp.id}>{comp.nombre}</li>)}
-      </ul>
-    </div>
+    <section className="container my-4" >
+      <div className='vh-100'>
+        <h1>Fabricantes y Componentes</h1>
+        <h2>Fabricantes</h2>
+        <ul>
+          {fabricantes.map(fab => <li key={fab.id}>{fab.nombre}</li>)}
+       </ul>
+        <h2>Componentes</h2>
+        <ul>
+          {componentes.map(comp => <li key={comp.id}>{comp.nombre}</li>)}
+        </ul>
+      </div>
     </section>
   );
 }
