@@ -2,20 +2,41 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import catalogoStyle from '../styles/catalogo.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Error from '../components/Error';
+import Style from '../styles/section.module.css';
 
 function FabricantesYComponentes() {
   const [fabricantes, setFabricantes] = useState([]);
   const [componentes, setComponentes] = useState([]);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     fetch('http://localhost:5000/fabricantes')
       .then(response => response.json())
-      .then(data => setFabricantes(data));
-
+      .then(data => setFabricantes(data))
+      .catch(err => {
+        console.error('Error al cargar el producto:', err)
+        setError(true)
+      });
     fetch('http://localhost:5000/componentes')
       .then(response => response.json())
-      .then(data => setComponentes(data));
+      .then(data => setComponentes(data))
+      .catch(err => {
+        console.error('Error al cargar el producto:', err)
+        setError(true)
+      });
   }, []);
+
+  if(error) {
+    return (
+      <div>
+        <Error 
+          titulo={<h1>Recurso No Encontrado</h1>}
+          elemento={<img src="/images/error.png" alt="Saludos"  className={Style.imagenGrande}/>}
+        />
+      </div>
+    )  
+  }
 
   return (
     <div class="text-center">

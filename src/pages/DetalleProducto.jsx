@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Error from '../components/Error';
 import SectionC from '../components/SectionC';
 import { Link } from 'react-router-dom';
 import Style from '../styles/section.module.css';
@@ -9,20 +10,42 @@ function DetalleProducto() {
   const [producto, setProducto] = useState(null);
   const [prodFab, setProdFab] = useState([]);
   const [prodCom, setProdCom] = useState([]);
+  const [error, setError] = useState(false);
+
   useEffect( () => {
     fetch(`http://localhost:5000/productos/${id}`)
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) 
+          throw new Error('Producto no encontrado');
+        return response.json();
+      })
       .then(data => setProducto(data))
+      .catch(err => {
+        console.error('Error al cargar el producto:', err)
+        setError(true)
+      });
+      
+      fetch(`http://localhost:5000/productos/${id}/fabricantes`)
+      .then(response => response.json())
+      .then(data => setProdFab(data))
       .catch(err => console.error('Error al cargar el producto:', err));
-
-     fetch(`http://localhost:5000/productos/${id}/fabricantes`)
+      
+      fetch(`http://localhost:5000/productos/${id}/componentes`)
       .then(response => response.json())
-      .then(data => setProdFab(data));
-
-     fetch(`http://localhost:5000/productos/${id}/componentes`)
-      .then(response => response.json())
-      .then(data => setProdCom(data));
-  }, [id]);
+      .then(data => setProdCom(data))
+      .catch(err => console.error('Error al cargar el producto:', err));
+    }, [id]);
+    
+  if(error) {
+    return (
+      <div>
+        <Error 
+          titulo={<h1>Recurso No Encontrado</h1>}
+          elemento={<img src="/images/error.png" alt="Saludos"  className={Style.imagenGrande}/>}
+        />
+      </div>
+    )  
+  }
 
   if (!producto) return <p>Cargando...</p>;
   return (

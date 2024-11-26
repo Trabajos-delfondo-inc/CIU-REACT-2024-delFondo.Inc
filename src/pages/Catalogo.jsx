@@ -2,19 +2,29 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import catalogoStyle from '../styles/catalogo.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Style from '../styles/section.module.css';
+import Error from '../components/Error'
 
 function CatalogoProductos() {
   const [productosDisponibles, setProductosDisponibles] = useState([]);
   const [productosSeleccionados, setProductosSeleccionados] = useState([]);
   const [precioTotal, setPrecioTotal] = useState(0);
-
+  const [error, setError] = useState(false);
+  
   useEffect(() => {
     fetch('http://localhost:5000/productos')
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) 
+          throw new Error('Producto no encontrado');
+        return response.json();
+      })
       .then((data) => setProductosDisponibles(data))
-      .catch((err) => console.error('Error al cargar los productos:', err));
+      .catch((err) => {
+        console.error('Error al cargar los productos:', err)
+        setError(true)
+      });
   }, []);
-  
+  console.log(error)
   
   useEffect(()=>{
     calcularPrecioTotal()
@@ -50,7 +60,18 @@ function CatalogoProductos() {
     );
     setPrecioTotal(totalCalculado);
   };
-
+  
+  if(error) {
+    return (
+      <div>
+        <Error 
+          titulo={<h1>Recurso No Encontrado</h1>}
+          elemento={<img src="/images/error.png" alt="Saludos"  className={Style.imagenGrande}/>}
+        />
+      </div>
+    )  
+  }
+  
   return (
     <div>
       {/* Titulo */}
