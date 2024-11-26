@@ -61,7 +61,7 @@ function DetalleProducto() {
       texto={
         <div>
           <div>
-            <p>producto con numero de identificación {producto.id}</p>
+            <p><strong>Producto N°{producto.id}</strong></p>
             <p>{producto.descripcion}</p>
             <hr />
           </div>
@@ -79,9 +79,9 @@ function DetalleProducto() {
             <hr />
           </div>
           <div>
-            <img src="/public\images\productos\envio-icono.svg" alt="" />
+            <img src="/public\images\productos\envio-icono.svg" className={Style.icono} alt="" />
             <p>Envios en Capital Federal: 1 a 2 dias habiles</p>
-            <p>Envios a Provincia (incluyendo Uruguay(Borrar despues)):2 a 4 dias habiles</p>
+            <p>Envios a Provincia: 2 a 4 dias habiles</p>
             <hr />
           </div>
         </div>

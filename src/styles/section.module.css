@@ -128,9 +128,10 @@
 .icono{
     width: 80px;
     height: 80px;
+    margin: 10px;
 }
 
 .imagenGrande{
-    width: 100%;
+    width: 80%;
     height: auto;
 }
