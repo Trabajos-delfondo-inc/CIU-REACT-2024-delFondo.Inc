@@ -44,7 +44,10 @@ function Inicio() {
         <SectionB
           titulo={<h1>¿Qué productos ofrecemos?</h1>}
           elemento={<Carousel images={images} />}
-          texto={<p>Estos son algunos de nuestra amplia gama de productos, que le permiten a tu empresa evolucionar hacia un entorno más automatizado y seguro, facilitando la gestión y reduciendo costos operativos.</p>}
+          texto={<div>
+            <p>Estos son algunos de nuestra amplia gama de productos, que le permiten a tu empresa evolucionar hacia un entorno más automatizado y seguro, facilitando la gestión y reduciendo costos operativos.</p>
+            <p class="border border-light rounded p-2">Haz click en las imagenes para ver pruebas de los productos en video.</p>
+            </div>}
         />
         <SectionA 
           titulo={<h1>Contactá con nosotros</h1>}
@@ -65,12 +68,13 @@ function Inicio() {
               </div>
               <div>
                 <form action="#">
-                    <div class="mb-3 mt-3">
+                    <div class="text-start mb-3 mt-3">
                       <label for="email" class="form-label">Email:</label>
                       <input type="email" class="form-control" id="email" placeholder="Enter email" name="email"/>
+                      <br />
+                      <label for="comment" class="form-label">Dejanos tu mensaje:</label>
+                      <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
                     </div>
-                    <label for="comment">Dejanos tu mensaje:</label>
-                    <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>
               </div>

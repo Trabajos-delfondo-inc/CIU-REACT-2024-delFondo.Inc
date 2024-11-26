@@ -63,7 +63,7 @@
 }
 
 .sectionC h2{
-    font-family: 'Nunito Sans', cursive;
+    font-family: var(--fuente2);
 }
 
 .titulo{
@@ -108,7 +108,7 @@
     word-wrap: break-word;
     overflow-wrap: break-word;
     font-size: var(--parrafoSize);
-    font-family: 'Nunito Sans', cursive;
+    font-family: 'Nunito Sans';
     text-align: justify;
     justify-content: start;
     align-items: center;
