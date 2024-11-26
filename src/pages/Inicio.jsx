@@ -26,7 +26,7 @@ function Inicio() {
         />
         <SectionB 
           titulo={<h1>¿Por qué es importante contar con nosotros?</h1>}
-          elemento={<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video de presentación" width="600" height="315" allowFullScreen></iframe>}
+          elemento={<iframe width="560" height="315" src="https://www.youtube.com/embed/XJ8PXoXZcWU?si=f2baraTotxE4yQw5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>}
           texto={<p>
             <ul><h3>Productos de alta calidad:</h3>Solo trabajamos con productos de la más alta calidad, garantizando eficiencia y durabilidad.</ul> 
             <ul><h3>Soporte especializado:</h3> Te acompañamos en todo momento, asegurando una implementación exitosa conforme a las mejores prácticas de ITIL.</ul>

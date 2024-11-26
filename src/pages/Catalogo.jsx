@@ -51,14 +51,13 @@ function CatalogoProductos() {
     setPrecioTotal(totalCalculado);
   };
 
-
-
-
   return (
     <div>
-    <div className={catalogoStyle.titulo}>
-      <h1>Catálogo de Productos</h1>
-    </div>
+      {/* Titulo */}
+      <div className={catalogoStyle.titulo}>
+        <h1>Catálogo de Productos</h1>
+      </div>
+
       <div className={catalogoStyle.catalogo}>
         {productosDisponibles.map((producto) => (
           <div key={producto.id} className="card">
@@ -66,43 +65,53 @@ function CatalogoProductos() {
             <div className="card-body">
               <h5 className="card-title">{producto.nombre}</h5>
               <p className="card-text">{producto.descripcion}</p>
-              <p className="card-text"><small className="text-muted"><strong>Precio:</strong> ${producto.precio}</small></p>
+              <p className="card-text">
+                <small className="text-muted"><strong>Precio:</strong> ${producto.precio}</small>
+              </p>
             </div> 
             <div>
-              <label>
-                Cantidad:
-                <input
-                    id={`cantidad-${producto.id}`}
-                    type="number"
-                    min="0"
-                    class="form-control w-50"
-                  defaultValue={0}
-                  onChange={ e =>  actualizarCantidad(producto.id, e.target.value) }
-                />
-              </label>
-              <button
-                onClick={() => {
-                  const cantidad = document.querySelector(`#cantidad-${producto.id}`).value;
-                  if (cantidad > 0) {
-                    agregarProducto(producto, cantidad);
-                  } 
-                }}
-              >
-              Seleccionar
-              </button>
-              <Link to={`/productos/${producto.id}`} className="btn btn-info mt-2">Ver más detalles</Link>
+              {/* Cantidad */}
+              <div class="d-flex justify-content-center align-items-center">
+                <label class="text-center w-50 ms-1 mb-2">
+                  Cantidad:
+                </label>
+                <input class="form-control w-50 ms-1 mb-2"
+                      id={`cantidad-${producto.id}`}
+                      type="number"
+                      min="0"
+                      defaultValue={0}
+                      onChange={ e =>  actualizarCantidad(producto.id, e.target.value) }
+                  />
+              </div>
+              {/* Ver mas detalle y Seleccionar */}
+              <div class="d-flex justify-content-center align-items-center">
+                <Link to={`/productos/${producto.id}`} className="btn btn-info w-50 ms-1 mb-2">Ver más detalles</Link>
+                <button className="btn btn-dark w-50 ms-1 mb-2"
+                  onClick={() => {
+                    const cantidad = document.querySelector(`#cantidad-${producto.id}`).value;
+                    if (cantidad > 0) {
+                      agregarProducto(producto, cantidad);
+                    } 
+                  }}>
+                  Seleccionar
+                </button>
+              </div>
+
             </div>
           </div>
         ))}
       </div>
+
+      {/* Carrito */}
       <div className="d-flex justify-content-end align-items sticky-bottom">
           <button  className=' btn btn-dark ms-1 mb-2' disabled>Precio Total: ${precioTotal}</button>
           <button onClick={calcularPrecioTotal} className="btn btn-primary ms-1 mb-2">
-          Ir al carrito
-        </button>
+            Ir al carrito
+          </button>
       </div>
+
     </div>
-  );
+);
 }
 
 export default CatalogoProductos;
