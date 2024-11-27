@@ -126,11 +126,20 @@ function CatalogoProductos() {
       {/* Carrito */}
       <div className="d-flex justify-content-end align-items sticky-bottom">
           <button  className=' btn btn-dark ms-1 mb-2' disabled>Precio Total: ${precioTotal}</button>
-          <button onClick={calcularPrecioTotal} className="btn btn-primary ms-1 mb-2">
-            Ir al carrito
-          </button>
+          <div className='btn-group dropup'>
+            <button class="btn btn-primary  dropdown-toggle" data-bs-toggle="dropdown" >
+              Ir al carrito
+            </button>
+            <ul class="dropdown-menu">
+              {productosSeleccionados.map((producto) => (
+                <div>
+                  <p>{producto.cantidad}-{producto.nombre}</p>
+                  <hr />
+                </div>
+              ))}
+            </ul>    
+          </div>
       </div>
-
     </div>
 );
 }
