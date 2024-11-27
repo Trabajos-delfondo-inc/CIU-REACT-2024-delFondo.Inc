@@ -1,6 +1,8 @@
 **Trabajo Práctico - Construcción de Interfaces de Usuario**
 # Desarrollo de Frontend en React para el Sistema de Gestión de Productos
 
+![banner](banner2.png)
+
 ### Descripción del Proyecto
 
 La presente aplicación web desarrollada en React permite a los usuarios visualizar la información almacenada en una API de gestión de
