@@ -51,4 +51,6 @@ npm run dev
 -Importante: ambas aplicaciones (tanto Backend como Frontend) deben estar corriendo a la par para el correcto funcionamiento de la página web. 
 
 
-## Integrantes: Calderon, Carlos - Di Pietro, Leandro - Herrera, Erik - Nuñez, Ariel - Pagliarulo, Rocío - Tabaka, Luca
+## Integrantes
+
+Calderon, Carlos - Di Pietro, Leandro - Herrera, Erik - Nuñez, Ariel - Pagliarulo, Rocío - Tabaka, Luca
