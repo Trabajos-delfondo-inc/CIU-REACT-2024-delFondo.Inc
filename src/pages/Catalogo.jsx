@@ -81,7 +81,7 @@ function CatalogoProductos() {
       {/* Catalogo */}
       <div class="d-flex flex-wrap justify-content-center w-80" style={{gap: '20px'}}>
         {productosDisponibles.map((producto) => (
-          <div key={producto.id} className="card" style={{width: '300px'}} >
+          <div key={producto.id} className="card" style={{width: '300px'}}>
             <img src={producto.pathImg} className={producto.nombre} alt={producto.nombre}/>
             <div className="card-body">
               <h5 className="card-title">{producto.nombre}</h5>

@@ -46,9 +46,9 @@ function FabricantesYComponentes() {
       </div>
 
       <h2>Fabricantes con los que trabajamos</h2>
-      <div className={catalogoStyle.catalogo}>
+      <div class="d-flex flex-wrap justify-content-center w-80" style={{gap: '20px'}}>
           {fabricantes.map(fab => (
-            <div key={fab.id} className="card">
+            <div key={fab.id} className="card" style={{width: '300px'}}>
               <img src={fab.pathImgPerfil} className={fab.nombre} alt={fab.nombre}/>
               <div className="card-body">
                 <h5 className="card-title">{fab.nombre}</h5>
@@ -62,9 +62,9 @@ function FabricantesYComponentes() {
       </div>
 
       <h2>Componentes disponibles</h2>
-      <div className={catalogoStyle.catalogo}>
+      <div class="d-flex flex-wrap justify-content-center w-80" style={{gap: '20px'}}>
           {componentes.map(comp => (
-            <div key={comp.id} className="card">
+            <div key={comp.id} className="card" style={{width: '300px'}}>
               <div className="card-body">
                 <h5 className="card-title">{comp.nombre}</h5>
                 <p className="card-text">{comp.descripcion}</p>
