@@ -78,10 +78,10 @@ function CatalogoProductos() {
       <div className={catalogoStyle.titulo}>
         <h1>Catálogo de Productos</h1>
       </div>
-
-      <div className={catalogoStyle.catalogo}>
+      {/* Catalogo */}
+      <div class="d-flex flex-wrap justify-content-center w-80" style={{gap: '20px'}}>
         {productosDisponibles.map((producto) => (
-          <div key={producto.id} className="card">
+          <div key={producto.id} className="card" style={{width: '300px'}} >
             <img src={producto.pathImg} className={producto.nombre} alt={producto.nombre}/>
             <div className="card-body">
               <h5 className="card-title">{producto.nombre}</h5>
@@ -126,20 +126,21 @@ function CatalogoProductos() {
       {/* Carrito */}
       <div className="d-flex justify-content-end align-items sticky-bottom">
           <button  className=' btn btn-dark ms-1 mb-2' disabled>Precio Total: ${precioTotal}</button>
-          <div className='btn-group dropup'>
+          <div className='btn-group ms-1 mb-2 dropup'>
             <button class="btn btn-primary  dropdown-toggle" data-bs-toggle="dropdown" >
               Ir al carrito
             </button>
             <ul class="dropdown-menu">
               {productosSeleccionados.map((producto) => (
                 <div>
-                  <p>{producto.cantidad}-{producto.nombre}</p>
+                  <p>{producto.nombre} x{producto.cantidad}</p>
                   <hr />
                 </div>
               ))}
             </ul>    
           </div>
       </div>
+
     </div>
 );
 }
