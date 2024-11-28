@@ -79,7 +79,7 @@ function CatalogoProductos() {
         <h1>Catálogo de Productos</h1>
       </div>
       {/* Catalogo */}
-      <div class="d-flex flex-wrap justify-content-center w-80" style={{gap: '20px'}}>
+      <div class="d-flex flex-wrap justify-content-center w-80 mt-3" style={{gap: '20px'}}>
         {productosDisponibles.map((producto) => (
           <div key={producto.id} className="card" style={{width: '300px'}}>
             <img src={producto.pathImg} className={producto.nombre} alt={producto.nombre}/>
@@ -125,15 +125,15 @@ function CatalogoProductos() {
 
       {/* Carrito */}
       <div className="d-flex justify-content-end align-items sticky-bottom">
-          <button  className=' btn btn-dark ms-1 mb-2' disabled>Precio Total: ${precioTotal}</button>
-          <div className='btn-group ms-1 mb-2 dropup'>
-            <button class="btn btn-primary  dropdown-toggle" data-bs-toggle="dropdown" >
+        <div className='btn-group  dropup'>
+            <button  className='  btn btn-dark  mb-2' disabled>Precio Total: ${precioTotal}</button>
+            <button class="btn btn-primary dropdown-toggle ms-1 mb-2  " data-bs-toggle="dropdown" >
               Ir al carrito
             </button>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu list-inline text-light w-100" style={{backgroundColor: 'rgba(128, 128, 128, 0.8)'}}>
               {productosSeleccionados.map((producto) => (
                 <div>
-                  <p>{producto.nombre} x{producto.cantidad}</p>
+                  <li className='list-inline-item p-2'>{producto.nombre} x {producto.cantidad}</li>
                   <hr />
                 </div>
               ))}

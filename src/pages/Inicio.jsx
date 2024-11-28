@@ -22,15 +22,15 @@ function Inicio() {
           titulo={<h1>DelFondo.inc - Soluciones tecnológicas</h1>}
           texto={<p> <h2>¿Quiénes somos?</h2><br />
              Somos una empresa líder de productos informáticos para la industria. Proveemos soluciones y damos soporte para que tu empresa pueda sistematizar procesos, prevenir riesgos o generar mecanismos de seguridad a costos bajos.<br/>Ofrecemos productos de excelente calidad y asistimos con implementaciones dentro del marco de ITIL.</p>}
-          elemento={<img src="https://www.brysonhillsperu.com/wp-content/uploads/2023/10/empresas-industriales.jpg" alt="viva la pepa"  className={Style.imagenGrande}/>}
+          elemento={<img src="https://www.brysonhillsperu.com/wp-content/uploads/2023/10/empresas-industriales.jpg" alt="Empresa industrial"  />}
         />
         <SectionB 
           titulo={<h1>¿Por qué es importante contar con nosotros?</h1>}
           elemento={<iframe width="560" height="315" src="https://www.youtube.com/embed/FPhg_ZjrPtU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>}
           texto={<p>
-            <ul><h3>Productos de alta calidad:</h3>Solo trabajamos con productos de la más alta calidad, garantizando eficiencia y durabilidad.</ul> 
-            <ul><h3>Soporte especializado:</h3> Te acompañamos en todo momento, asegurando una implementación exitosa conforme a las mejores prácticas de ITIL.</ul>
-            <ul><h3>Soluciones a medida: </h3> Nos adaptamos a las necesidades específicas de tu negocio, brindando herramientas personalizadas para mejorar cada uno de tus procesos.</ul> 
+            <h2>Productos de alta calidad:</h2><p>Solo trabajamos con productos de la más alta calidad, garantizando eficiencia y durabilidad.</p>
+            <h2>Soporte especializado:</h2> <p>Te acompañamos en todo momento, asegurando una implementación exitosa conforme a las mejores prácticas de ITIL.</p>
+            <h2>Soluciones a medida: </h2> <p>Nos adaptamos a las necesidades específicas de tu negocio, brindando herramientas personalizadas para mejorar cada uno de tus procesos.</p>
             </p>}
         />
         <SectionA 
@@ -39,7 +39,7 @@ function Inicio() {
            A lo largo de los años, hemos trabajado con empresas de diversas industrias, proporcionando soluciones que no solo cumplen, sino que superan las expectativas de nuestros clientes. <br />
 
            Todos ellos encuentran en <span>DelFondo.Inc</span> un socio tecnológico confiable.</p>}
-          elemento={<img src="https://www.dikaestudio.com/wp-content/uploads/2018/06/Logos-Famosos.-Curiosidades-1.jpg" alt="empresas-que-nos-respaldan"  className={Style.imagenGrande}/>}
+          elemento={<img src="https://www.dikaestudio.com/wp-content/uploads/2018/06/Logos-Famosos.-Curiosidades-1.jpg" alt="empresas-que-nos-respaldan"/>}
         />
         <SectionB
           titulo={<h1>¿Qué productos ofrecemos?</h1>}

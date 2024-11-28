@@ -9,7 +9,7 @@ function SectionC({titulo,elemento,texto,componentes,fabricantes}){
             <div className={estilo.item}>{elemento}</div>
             <div className={estilo.item}>{texto}</div>
           </div>
-          <hr className={estilo.separador} />
+          <hr/>
           <div className={estilo.contenedorDoble}>
             <div className={estilo.contenedorSimple}>{componentes}</div>
             <div className={estilo.contenedorSimple}>{fabricantes}</div>          

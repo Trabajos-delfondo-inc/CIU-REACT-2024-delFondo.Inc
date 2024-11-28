@@ -39,12 +39,12 @@ function FabricantesYComponentes() {
   }
 
   return (
-    <div class="text-center">
+    <div style={{minHeight:'100vh'}}>
       {/* Titulo */}
       <div className={catalogoStyle.titulo}>
         <h1>Fabricantes y Componentes</h1>
       </div>
-
+    <div class=" d-flex flex-column justify-content-around text-center mt-2 " >
       <h2>Fabricantes con los que trabajamos</h2>
       <div class="d-flex flex-wrap justify-content-center w-80" style={{gap: '20px'}}>
           {fabricantes.map(fab => (
@@ -60,8 +60,8 @@ function FabricantesYComponentes() {
             </div>
           ))}
       </div>
-
-      <h2>Componentes disponibles</h2>
+          
+      <h2 className='mt-3 mb-3'>Componentes disponibles </h2>
       <div class="d-flex flex-wrap justify-content-center w-80" style={{gap: '20px'}}>
           {componentes.map(comp => (
             <div key={comp.id} className="card" style={{width: '300px'}}>
@@ -71,9 +71,9 @@ function FabricantesYComponentes() {
               </div>
             </div>
           ))}
-      </div>
-
+        </div>
     </div>
+  </div>
 );
 }
 
