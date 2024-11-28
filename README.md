@@ -23,7 +23,7 @@ La aplicación permitirá a los usuarios:
 
 ## Backend
 
-[Backend disponible en GitHub](https://github.com/CIU-UnaHur/tp-backend)
+[Backend disponible en GitHub](https://github.com/Trabajos-delfondo-inc/CIU-BACKEND-2024-delFondo.Inc.git)
 
 Una vez clonado el repositorio, abrir una terminal donde se encuentre el mismo y correr los siguientes comandos:
 
